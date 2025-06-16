@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JournEasy Edit Property</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <% layout("/layouts/boilerplate.ejs") %>
+    <h1 class="mb-3 offset-2">Edit Property</h1>
+
+    <form method="post" action="/listings/<%= listing._id %>?_method=PUT" class="needs-validation" novalidate>
+        <div class="col-8 offset-2">
+            <div class="mb-3">
+                <label for="label" class="form-label">Title</label>
+                <input class="form-control" type="text" value="<%= listing.title %>" name="listing[title]" id="label" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" rows="7" name="listing[description]" id="description" required><%= listing.description %></textarea>
+            </div>
+            <div class="mb-3 col-md-12">
+                <label for="image" class="form-label">Image</label>
+                <input class="form-control" type="text" name="listing[image.url]" id="image" placeholder="<%= listing.image.url %>" value="<%= listing.image.url %>">
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">Price/Night (₹)</label>
+                    <input class="form-control" type="text" value="<%= listing.price %>" name="listing[price]" id="price" required>
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input class="form-control" type="text" value="<%= listing.country %>" name="listing[country]" id="country" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="location" class="form-label">Where is the property located?</label>
+                <input class="form-control" id="location" value="<%= listing.location %>" type="text" name="listing[location]" required>
+            </div>
+
+            <button class="offset-1 btn btn-dark" type="submit">Update Listing</button>
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

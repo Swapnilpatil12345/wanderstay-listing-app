@@ -1,0 +1,110 @@
+.card-img-top {
+  height: 50vh;
+}
+
+.card-body {
+  height: 20vh;
+  overflow: hidden;
+}
+
+.card {
+  margin-top: 12rem;
+  border: none !important;
+}
+.h-card-link {
+  text-decoration: none;
+}
+.f-info div {
+  width: 100%;
+  flex-wrap: wrap;
+}
+.f-info {
+  display: flex;
+  justify-content: center;
+}
+.card-text {
+  height: 20vh;
+  overflow: hidden;
+}
+/* index page */
+.row {
+  display: flex;
+}
+.col {
+  display: flex;
+  flex-direction: row;
+}
+.card-img-overlay {
+  display: none;
+}
+.card-img-overlay:hover {
+  display: block;
+  background-color: white;
+  opacity: 0.2;
+}
+
+/* show page */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 3px !important;
+  padding: 0 !important;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  max-width: 50rem;
+}
+
+.card {
+  padding: 2px;
+  width: 200px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.remove-btn {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+.show-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review-container {
+  width: 40rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* feedback form show */
+
+.feedback-from form {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+}
+.rating-input {
+  width: 500px;
+}
+/* navbar style */
+.navbar {
+  background-color: white;
+}
+
+/* footer style */
+.f-info {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
